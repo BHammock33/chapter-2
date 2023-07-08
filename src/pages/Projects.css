@@ -1,0 +1,12 @@
+
+.Projects-container > div > ul > li {
+    list-style: inside;
+}
+.Projects-container > div > ul > li > span {
+    font-size: large;
+    font-weight: 600;
+}
+.Projects-container > div > ul > li > span > span{
+    position: relative;
+    left: 10px;
+}

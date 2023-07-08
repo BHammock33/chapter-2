@@ -1,0 +1,26 @@
+.Profile-container{
+    width: 50%;
+    margin: 10px auto;
+}
+.Profile-avatar{
+    width: 150px;
+}
+.Profile-container > ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.Profile-container > div > ul > li{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.Profile-container > div > ul > li > span {
+    font-weight: 600;
+    font-size: large;
+}
+.App-link{
+    position: relative;
+    left: 10px;
+}
+
