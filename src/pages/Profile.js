@@ -53,6 +53,7 @@ function Profile({ userName }) {
                 <List items={items} />
                 <p>email: BennettHammock@gmail.com</p>
                 <p>LinkedIn<Link url={`www.linkedin.com/in/bennett-hammock
+`} title={`www.linkedin.com/in/bennett-hammock
 `} /></p>
                </div> 
             )}
