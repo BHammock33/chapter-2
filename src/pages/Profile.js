@@ -20,7 +20,6 @@ function Profile({ userName }) {
         {field: 'name', value: profile.name},
         {field: 'company', value: profile.company},
         {field: 'location', value: profile.location},
-        {field: 'email', value: profile.email},
         {field: 'bio', value: profile.bio},
     ];
 
@@ -52,6 +51,9 @@ function Profile({ userName }) {
                   alt ={profile.name}
                   />
                 <List items={items} />
+                <p>email: BennettHammock@gmail.com</p>
+                <p><Link url={`www.linkedin.com/in/bennett-hammock
+`} title={LinkedIn} /></p>
                </div> 
             )}
         </div>
