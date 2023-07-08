@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Link from '../Components/Link';
+import { Link as RouterLink} from 'react-router-dom'
 import './Profile.css';
 import List from '../Components/List';
 
@@ -10,17 +10,21 @@ function Profile({ userName }) {
 
     const items = [
         {
-            field: 'html_url',
-            value: <Link url={profile.html_url} title={profile.html_url} />,
+            field: 'Html_url',
+            value: (<RouterLink to={profile.html_url} title={profile.html_url}>
+                Github Profile URL: 
+            </RouterLink>),
         },
         {
-            field: 'repos_url',
-            value: <Link url={profile.repos_url} title={profile.repos_url} />,
+            field: 'Repos_url',
+            value: (<RouterLink to={`https://github.com/${userName}?tab=repositories`}title={profile.repos_url}>
+                Github Repos
+            </RouterLink>), 
         },
-        {field: 'name', value: profile.name},
-        {field: 'company', value: profile.company},
-        {field: 'location', value: profile.location},
-        {field: 'bio', value: profile.bio},
+        {field: 'Name', value: profile.name},
+        {field: 'Company', value: profile.company},
+        {field: 'Location', value: profile.location},
+        {field: 'Bio', value: profile.bio},
     ];
 
     useEffect(() => {
@@ -51,10 +55,8 @@ function Profile({ userName }) {
                   alt ={profile.name}
                   />
                 <List items={items} />
-                <p>email: BennettHammock@gmail.com</p>
-                <p>LinkedIn<Link url={`www.linkedin.com/in/bennett-hammock
-`} title={`www.linkedin.com/in/bennett-hammock
-`} /></p>
+                <p>Email: BennettHammock@gmail.com</p>
+                <p><RouterLink to={'https://www.linkedin.com/in/bennett-hammock'} title={'www.linkedin.com/in/bennett-hammock'} >LinkedIn</RouterLink></p>
                </div> 
             )}
         </div>
